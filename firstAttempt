@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+//PSEUDOCODE-START
+//THE FIRST SCAN WILL FIND OUT HOW MANY POSITIVE AND NEGATIVE NUMBERS EXIST IN THE EXPENSE/INCOME REPORT
+//AN ARRAY WILL BE BUILT TO HOLD THE EXPENSES AND INCOMES
+//THE SECOND SCAN WILL ACCEPT THE VALUES OF THE EXPENSES AS NEGATIVE NUMBERS AND THE INCOME AS POSITIVE NUMBERS
+//AN IF STATEMENT WILL ONLY LOOK AT THE NEGATIVE NUMBERS
+//WE WILL ADD ALL NEGATIVE NUMBERS AND OUTPUT THE NUMBER OF NEGATIVE ENTRIES AS A SINGLE INTEGER
+//PSEUDOCODE-STOP
+
+public class JobExpense {
+
+	public static void main(String[] args) {
+		int sumOfNegativeEntries = 0;
+		Scanner scan = new Scanner(System.in);
+		int accountingEntries = scan.nextInt();
+		int accountingEntriesArray[] = new int[accountingEntries];
+		for (int i = 0; i < accountingEntriesArray.length; i++) {
+			int expenseAndIncomeInputs = scan.nextInt();
+			if (expenseAndIncomeInputs < 0) {
+				sumOfNegativeEntries += 1;
+			}
+		}
+		System.out.println(sumOfNegativeEntries);
+		scan.close();
+	}
+}
